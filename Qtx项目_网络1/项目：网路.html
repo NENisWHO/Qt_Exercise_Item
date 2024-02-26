@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="VNote">
+
+    <title>项目：网路</title>
+
+    <style type="text/css">
+    div.code-toolbar > div.toolbar {
+    display: none;
+}
+
+    </style>
+
+    <style type="text/css">
+    *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-9 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-10 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+}
+
+@media (min-width: 768px) {
+    .pt-md-3, .py-md-3 {
+        padding-top: 1rem!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .pb-md-3, .py-md-3 {
+        padding-bottom: 1rem!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .pl-md-5, .px-md-5 {
+        padding-left: 3rem!important;
+    }
+}
+
+.d-none {
+    display: none!important;
+}
+
+@media (min-width: 1200px) {
+    .d-xl-block {
+        display: block!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .d-md-block {
+        display: block!important;
+    }
+}
+
+.bd-content {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+}
+
+.bd-toc {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+    height: calc(100vh - 10rem);
+    overflow-y: auto;
+}
+
+.bd-toc {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: .875rem;
+}
+
+.section-nav {
+    padding-left: 0;
+}
+
+.section-nav ul {
+    font-size: .875rem;
+    list-style-type: none;
+}
+
+.section-nav li {
+    font-size: .875rem;
+}
+
+.section-nav a {
+    color: inherit !important;
+    white-space: nowrap;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (min-width: 1200px) {
+    .flex-xl-nowrap {
+        flex-wrap: nowrap !important;
+    }
+}
+
+#floating-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #00897B;
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #666;
+}
+
+#floating-button .more {
+    color: #F5F5F5;
+    position: absolute;
+    top: 0;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    font-family: 'monospace';
+    font-weight: 300;
+}
+
+.hide-none {
+    display: none !important;
+}
+
+.col-expand {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding-right: 3rem !important;
+}
+
+.outline-bold {
+    font-weight: bolder !important;
+}
+
+@media print {
+    #floating-button {
+        display: none !important;
+    }
+}
+
+
+    #vx-content.vx-section-number, #vx-content.vx-section-number-2 h1, #vx-content.vx-section-number-3 h1, #vx-content.vx-section-number-3 h2 { counter-reset: section1 0 section2 0 section3 0 section4 0 section5 0 section6 0; }
+#vx-content.vx-section-number-1 h1, #vx-content.vx-section-number-2 h2, #vx-content.vx-section-number-3 h3 { counter-reset: section2 0 section3 0 section4 0 seciton5 0 section6 0; }
+#vx-content.vx-section-number-1 h2, #vx-content.vx-section-number-2 h3, #vx-content.vx-section-number-3 h4 { counter-reset: section3 0 section4 0 section5 0 section6 0; }
+#vx-content.vx-section-number-1 h3, #vx-content.vx-section-number-2 h4, #vx-content.vx-section-number-3 h5 { counter-reset: section4 0 section5 0 section6 0; }
+#vx-content.vx-section-number-1 h4, #vx-content.vx-section-number-2 h5 { counter-reset: section5 0 section6 0; }
+#vx-content.vx-section-number-1 h5 { counter-reset: section6 0; }
+#vx-content.vx-section-number-1 h1::before, #vx-content.vx-section-number-2 h2::before, #vx-content.vx-section-number-3 h3::before { counter-increment: section1 1; content: counter(section1) ". "; }
+#vx-content.vx-section-number-1 h2::before, #vx-content.vx-section-number-2 h3::before, #vx-content.vx-section-number-3 h4::before { counter-increment: section2 1; content: counter(section1) "." counter(section2) ". "; }
+#vx-content.vx-section-number-1 h3::before, #vx-content.vx-section-number-2 h4::before, #vx-content.vx-section-number-3 h5::before { counter-increment: section3 1; content: counter(section1) "." counter(section2) "." counter(section3) ". "; }
+#vx-content.vx-section-number-1 h4::before, #vx-content.vx-section-number-2 h5::before, #vx-content.vx-section-number-3 h6::before { counter-increment: section4 1; content: counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) ". "; }
+#vx-content.vx-section-number-1 h5::before, #vx-content.vx-section-number-2 h6::before { counter-increment: section5 1; content: counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) "." counter(section5) ". "; }
+#vx-content.vx-section-number-1 h6::before { counter-increment: section6 1; content: counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) "." counter(section5) "." counter(section6) ". "; }
+#vx-content.vx-constrain-image-width img, #vx-content.vx-constrain-image-width div.vx-plantuml-graph > svg, #vx-content.vx-constrain-image-width div.vx-mermaid-graph, #vx-content.vx-constrain-image-width div.vx-flowchartjs-graph, #vx-content.vx-constrain-image-width div.vx-wavedrom-graph { max-width: 100% !important; height: auto !important; }
+figure { margin: auto; }
+figcaption { font-style: italic; }
+#vx-content.vx-image-align-center figure { text-align: center; }
+#vx-content.vx-image-align-center figcaption { text-align: center; }
+#vx-content.vx-image-align-center div.vx-plantuml-graph, #vx-content.vx-image-align-center div.vx-mermaid-graph, #vx-content.vx-image-align-center div.vx-flowchartjs-graph, #vx-content.vx-image-align-center div.vx-wavedrom-graph { margin-left: auto; margin-right: auto; }
+.vx-table-of-contents ol { list-style: none; }
+#vx-content.vx-section-number-1 .vx-table-of-contents ol { counter-reset: toc 0; }
+#vx-content.vx-section-number-1 .vx-table-of-contents ol li { counter-increment: toc 1; }
+#vx-content.vx-section-number-1 .vx-table-of-contents ol li::before { content: counters(toc, ".") ". "; font-family: cursive; }
+#vx-content.vx-section-number-2 .vx-table-of-contents > ol > li ol { counter-reset: toc 0; }
+#vx-content.vx-section-number-2 .vx-table-of-contents > ol > li ol li { counter-increment: toc 1; }
+#vx-content.vx-section-number-2 .vx-table-of-contents > ol > li ol li::before { content: counters(toc, ".") ". "; font-family: cursive; }
+#vx-content.vx-section-number-3 .vx-table-of-contents > ol > li > ol > li ol { counter-reset: toc 0; }
+#vx-content.vx-section-number-3 .vx-table-of-contents > ol > li > ol > li ol li { counter-increment: toc 1; }
+#vx-content.vx-section-number-3 .vx-table-of-contents > ol > li > ol > li ol li::before { content: counters(toc, ".") ". "; font-family: cursive; }
+.vx-header-anchor { visibility: hidden; vertical-align: middle; }
+.vx-header-anchor::after { content: attr(vx-data-anchor-icon); }
+#vx-content h1:hover .vx-header-anchor, #vx-content h2:hover .vx-header-anchor, #vx-content h3:hover .vx-header-anchor, #vx-content h4:hover .vx-header-anchor, #vx-content h5:hover .vx-header-anchor, #vx-content h6:hover .vx-header-anchor { visibility: visible; vertical-align: middle; }
+#vx-content.vx-indent-first-line p { text-indent: 2em; }
+body.vx-transparent-background { background-color: transparent !important; }
+#vx-content.vx-nonscrollable pre { white-space: pre-wrap !important; word-break: break-all !important; overflow: hidden !important; }
+#vx-content.vx-nonscrollable pre code { white-space: pre-wrap !important; word-break: break-all !important; }
+#vx-content.vx-nonscrollable code, #vx-content.vx-nonscrollable a { word-break: break-all !important; }
+body { margin: 0px auto; font-family: "YaHei Consolas Hybrid", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Tahoma, Arial, Geneva, Georgia, Palatino, "Times New Roman", 冬青黑体, "Microsoft YaHei", 微软雅黑, "Microsoft YaHei UI", "WenQuanYi Micro Hei", 文泉驿雅黑, Dengxian, 等线体, STXihei, 华文细黑, "Liberation Sans", "Droid Sans", NSimSun, 新宋体, SimSun, 宋体, "Apple Color Emoji", "Segoe UI Emoji"; color: rgb(34, 34, 34); line-height: 1.5; padding: 16px; background-color: rgb(255, 255, 255); font-size: 16px; }
+h1, h2, h3, h4, h5, h6 { color: rgb(34, 34, 34); font-weight: bold; margin-top: 20px; margin-bottom: 10px; padding: 0px; }
+p, blockquote, ul, ol, dl, table { margin: 0.4em 0px; }
+p { padding: 0px; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 1rem; }
+a { color: rgb(0, 153, 255); margin: 0px; padding: 0px; vertical-align: baseline; text-decoration: none; word-break: break-word; }
+a:hover { text-decoration: underline; }
+a:visited { color: purple; }
+ul, ol { padding: 0px 0px 0px 24px; }
+li { line-height: 24px; }
+li ul, li ol { margin-left: 16px; }
+p, ul, ol { font-size: 16px; line-height: 24px; }
+pre { display: block; overflow: auto hidden; tab-size: 4; }
+code { font-family: "YaHei Consolas Hybrid", Consolas, Monaco, "Andale Mono", monospace, "Courier New"; color: rgb(142, 36, 170); word-break: break-word; }
+pre code { display: block; padding-left: 0.5em; padding-right: 0.5em; color: rgb(34, 34, 34); background-color: rgb(224, 224, 224); line-height: 1.5; font-family: "YaHei Consolas Hybrid", Consolas, Monaco, "Andale Mono", monospace, "Courier New"; white-space: pre; tab-size: 4; }
+aside { display: block; float: right; width: 390px; }
+blockquote { color: rgb(102, 102, 102); border-left: 0.5em solid rgb(122, 122, 122); padding: 0px 1em; }
+blockquote p { color: rgb(102, 102, 102); }
+hr { display: block; text-align: left; margin: 1em 0px; border: none; height: 2px; background-color: rgb(153, 153, 153); }
+table { padding: 0px; margin: 1rem 0.5rem; border-collapse: collapse; }
+table tr { border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; }
+table tr:hover { background-color: rgb(218, 218, 218); }
+table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); margin: 0px; padding: 6px 13px; }
+table tr th :first-child, table tr td :first-child { margin-top: 0px; }
+table tr th :last-child, table tr td :last-child { margin-bottom: 0px; }
+div.vx-mermaid-graph { margin: 16px 0px; overflow-y: hidden; }
+div.vx-flowchartjs-graph { padding: 0px 5px; margin: 16px 0px; width: fit-content; overflow: hidden; }
+div.vx-wavedrom-graph { padding: 0px 5px; margin: 16px 0px; width: fit-content; overflow: hidden; }
+div.vx-plantuml-graph { padding: 5px 5px 0px; margin: 16px 0px; width: fit-content; overflow: hidden; }
+::selection { background-color: rgb(25, 118, 210); color: rgb(255, 255, 255); }
+::-webkit-scrollbar { background-color: rgb(245, 245, 245); width: 14px; height: 14px; border: none; }
+::-webkit-scrollbar-corner { background-color: rgb(245, 245, 245); }
+::-webkit-scrollbar-button { height: 14px; width: 14px; background-color: rgb(245, 245, 245); }
+::-webkit-scrollbar-button:hover { background-color: rgb(218, 218, 218); }
+::-webkit-scrollbar-button:active { background-color: rgb(192, 192, 192); }
+::-webkit-scrollbar-track { background-color: rgb(245, 245, 245); }
+::-webkit-scrollbar-thumb { border: none; background-color: rgb(205, 205, 205); }
+::-webkit-scrollbar-thumb:hover { background-color: rgb(192, 192, 192); }
+::-webkit-scrollbar-thumb:active { background-color: rgb(187, 187, 187); }
+::-webkit-scrollbar-button:horizontal:increment { background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 12L31 24L19 36" stroke="%23222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>'); background-repeat: no-repeat; background-size: contain; }
+::-webkit-scrollbar-button:horizontal:decrement { background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31 36L19 24L31 12" stroke="%23222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>'); background-repeat: no-repeat; background-size: contain; }
+::-webkit-scrollbar-button:vertical:increment { background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 18L24 30L12 18" stroke="%23222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>'); background-repeat: no-repeat; background-size: contain; }
+::-webkit-scrollbar-button:vertical:decrement { background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 30L25 18L37 30" stroke="%23222222" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>'); background-repeat: no-repeat; background-size: contain; }
+#vx-content span.vx-search-match { color: rgb(34, 34, 34); background-color: rgb(77, 182, 172); }
+#vx-content span.vx-current-search-match { color: rgb(34, 34, 34); background-color: rgb(102, 187, 106); }
+.vx-alert { background-color: rgb(226, 237, 243) !important; padding: 12px 24px 12px 30px !important; border-radius: 0px !important; border-top: none !important; border-right: none !important; border-bottom: none !important; border-image: initial !important; border-left: 4px solid rgb(73, 139, 167) !important; color: inherit !important; }
+.vx-alert::before { background-color: rgb(73, 139, 167); border-radius: 100%; color: rgb(255, 255, 255); content: "!"; font-family: Dosis, "Source Sans Pro", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: bold; left: -12px; line-height: 20px; position: absolute; height: 20px; width: 20px; text-align: center; top: 14px; }
+.alert-success, .alert-s { border-color: rgb(66, 185, 131) !important; background-color: rgb(212, 237, 218) !important; }
+.alert-success::before, .alert-s::before { background-color: rgb(66, 185, 131); }
+.alert-warning, .alert-w { border-color: rgb(255, 165, 2) !important; background-color: rgb(255, 243, 205) !important; }
+.alert-warning::before, .alert-w::before { background-color: rgb(255, 165, 2); }
+.alert-info, .alert-i { border-color: rgb(112, 161, 255) !important; background-color: rgb(204, 229, 255) !important; }
+.alert-info::before, .alert-i::before { background-color: rgb(112, 161, 255); }
+.alert-danger, .alert-d { border-color: rgb(255, 71, 87) !important; background-color: rgb(248, 215, 218) !important; }
+.alert-danger::before, .alert-d::before { background-color: rgb(255, 71, 87); }
+.alert-light { border-color: rgb(193, 193, 193) !important; background-color: rgb(248, 248, 248) !important; }
+.alert-light::before { background-color: rgb(193, 193, 193); }
+.alert-dark { border-color: rgb(72, 72, 72) !important; background-color: rgb(240, 240, 240) !important; }
+.alert-dark::before { background-color: rgb(72, 72, 72); }
+code[class*="language-"], pre[class*="language-"] { color: black; background: none; font-size: 1em; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; line-height: 1.5; tab-size: 4; hyphens: none; }
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[class*="language-"]::selection, code[class*="language-"] ::selection { text-shadow: none; background-color: rgb(25, 118, 210); color: rgb(255, 255, 255); }
+@media print {
+  code[class*="language-"], pre[class*="language-"] { text-shadow: none; }
+}
+pre[class*="language-"] { padding: 1em; margin: 0.5em 0px; overflow: auto; }
+:not(pre) > code[class*="language-"], pre[class*="language-"] { background: rgb(237, 232, 228); }
+:not(pre) > code[class*="language-"] { padding: 0.1em; border-radius: 0.3em; white-space: normal; }
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: slategray; }
+.token.punctuation { color: rgb(153, 153, 153); }
+.token.namespace { opacity: 0.7; }
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted { color: rgb(153, 0, 85); }
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted { color: rgb(102, 153, 0); }
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string { color: rgb(154, 110, 58); }
+.token.atrule, .token.attr-value, .token.keyword { color: rgb(0, 119, 170); }
+.token.function, .token.class-name { color: rgb(221, 74, 104); }
+.token.regex, .token.important, .token.variable { color: rgb(238, 153, 0); }
+.token.important, .token.bold { font-weight: bold; }
+.token.italic { font-style: italic; }
+.token.entity { cursor: help; }
+pre[class*="language-"].line-numbers { position: relative; padding-left: 3.8em; counter-reset: linenumber 0; }
+pre[class*="language-"].line-numbers > code { position: relative; white-space: inherit; }
+.line-numbers .line-numbers-rows { position: absolute; pointer-events: none; top: 0px; font-size: 100%; left: -3.8em; width: 3em; letter-spacing: -1px; border-right: 1px solid rgb(153, 153, 153); user-select: none; }
+.line-numbers-rows > span { display: block; counter-increment: linenumber 1; }
+.line-numbers-rows > span::before { content: counter(linenumber); color: rgb(153, 153, 153); display: block; padding-right: 0.8em; text-align: right; }
+div.code-toolbar { position: relative; }
+div.code-toolbar > .toolbar { position: absolute; top: 0.3em; right: 0.2em; transition: opacity 0.3s ease-in-out 0s; opacity: 0; }
+div.code-toolbar:hover > .toolbar { opacity: 1; }
+div.code-toolbar:focus-within > .toolbar { opacity: 1; }
+div.code-toolbar > .toolbar .toolbar-item { display: inline-block; }
+div.code-toolbar > .toolbar a { cursor: pointer; }
+div.code-toolbar > .toolbar button { background: none; border: 0px; color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; line-height: normal; overflow: visible; padding: 0px; user-select: none; }
+div.code-toolbar > .toolbar a, div.code-toolbar > .toolbar button, div.code-toolbar > .toolbar span { color: rgb(187, 187, 187); font-size: 0.8em; padding: 0px 0.5em; background: rgba(224, 224, 224, 0.2); box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px; border-radius: 0.5em; }
+div.code-toolbar > .toolbar a:hover, div.code-toolbar > .toolbar a:focus, div.code-toolbar > .toolbar button:hover, div.code-toolbar > .toolbar button:focus, div.code-toolbar > .toolbar span:hover, div.code-toolbar > .toolbar span:focus { color: inherit; text-decoration: none; }
+.vx-image-view-image { transition: all 0.3s ease 0s; }
+.vx-modal-box { display: none; position: fixed; z-index: 1000; padding-top: 50px; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; background-color: rgba(51, 56, 66, 0.85); }
+.vx-modal-content { margin: auto; display: block; width: auto; height: auto; cursor: move; }
+.vx-modal-content { animation-name: zoom; animation-duration: 0.6s; }
+@-webkit-keyframes zoom { 
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+@keyframes zoom { 
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+span.vx-modal-close { position: absolute; z-index: 1000; top: 15px; right: 35px; color: rgb(171, 178, 191); font-size: 40px; font-weight: bold; transition: all 0.3s ease 0s; }
+span.vx-modal-close:hover, span.vx-modal-close:focus { color: rgb(215, 218, 224); text-decoration: none; cursor: pointer; }
+ul.contains-task-list { list-style-type: none; }
+.vx-alert { position: relative; padding: 0.75rem 1.25rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: 0.25rem; }
+.alert-primary { color: rgb(0, 64, 133); background-color: rgb(204, 229, 255); border-color: rgb(184, 218, 255); }
+.alert-secondary { color: rgb(56, 61, 65); background-color: rgb(226, 227, 229); border-color: rgb(214, 216, 219); }
+.alert-success { color: rgb(21, 87, 36); background-color: rgb(212, 237, 218); border-color: rgb(195, 230, 203); }
+.alert-info { color: rgb(12, 84, 96); background-color: rgb(209, 236, 241); border-color: rgb(190, 229, 235); }
+.alert-warning { color: rgb(133, 100, 4); background-color: rgb(255, 243, 205); border-color: rgb(255, 238, 186); }
+.alert-danger { color: rgb(114, 28, 36); background-color: rgb(248, 215, 218); border-color: rgb(245, 198, 203); }
+.alert-light { color: rgb(129, 129, 130); background-color: rgb(254, 254, 254); border-color: rgb(253, 253, 254); }
+.alert-dark { color: rgb(27, 30, 33); background-color: rgb(214, 216, 217); border-color: rgb(198, 200, 202); }
+#vx-mermaid-graph-0 { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 16px; fill: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 .error-icon { fill: rgb(85, 34, 34); }
+#vx-mermaid-graph-0 .error-text { fill: rgb(85, 34, 34); stroke: rgb(85, 34, 34); }
+#vx-mermaid-graph-0 .edge-thickness-normal { stroke-width: 2px; }
+#vx-mermaid-graph-0 .edge-thickness-thick { stroke-width: 3.5px; }
+#vx-mermaid-graph-0 .edge-pattern-solid { stroke-dasharray: 0; }
+#vx-mermaid-graph-0 .edge-pattern-dashed { stroke-dasharray: 3; }
+#vx-mermaid-graph-0 .edge-pattern-dotted { stroke-dasharray: 2; }
+#vx-mermaid-graph-0 .marker { fill: rgb(51, 51, 51); stroke: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 .marker.cross { stroke: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 svg { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 16px; }
+#vx-mermaid-graph-0 .label { font-family: "trebuchet ms", verdana, arial, sans-serif; color: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 .cluster-label text { fill: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 .cluster-label span { color: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 .label text, #vx-mermaid-graph-0 span { fill: rgb(51, 51, 51); color: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 .node rect, #vx-mermaid-graph-0 .node circle, #vx-mermaid-graph-0 .node ellipse, #vx-mermaid-graph-0 .node polygon, #vx-mermaid-graph-0 .node path { fill: rgb(236, 236, 255); stroke: rgb(147, 112, 219); stroke-width: 1px; }
+#vx-mermaid-graph-0 .node .label { text-align: center; }
+#vx-mermaid-graph-0 .node.clickable { cursor: pointer; }
+#vx-mermaid-graph-0 .arrowheadPath { fill: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 .edgePath .path { stroke: rgb(51, 51, 51); stroke-width: 2px; }
+#vx-mermaid-graph-0 .flowchart-link { stroke: rgb(51, 51, 51); fill: none; }
+#vx-mermaid-graph-0 .edgeLabel { background-color: rgb(232, 232, 232); text-align: center; }
+#vx-mermaid-graph-0 .edgeLabel rect { opacity: 0.5; background-color: rgb(232, 232, 232); fill: rgb(232, 232, 232); }
+#vx-mermaid-graph-0 .cluster rect { fill: rgb(255, 255, 222); stroke: rgb(170, 170, 51); stroke-width: 1px; }
+#vx-mermaid-graph-0 .cluster text { fill: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 .cluster span { color: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 div.mermaidTooltip { position: absolute; text-align: center; max-width: 200px; padding: 2px; font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 12px; background: rgb(249, 255, 236); border: 1px solid rgb(170, 170, 51); border-radius: 2px; pointer-events: none; z-index: 100; }
+#vx-mermaid-graph-0 .flowchartTitleText { text-anchor: middle; font-size: 18px; fill: rgb(51, 51, 51); }
+#vx-mermaid-graph-0 :root { --mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif; }
+
+    </style>
+
+    <script type="text/javascript">
+        var vxOutlineToc = [];
+
+var setVisible = function(node, visible) {
+    var cl = 'hide-none';
+    if (visible) {
+        node.classList.remove(cl);
+    } else {
+        node.classList.add(cl);
+    }
+};
+
+var isVisible = function(node) {
+    var cl = 'hide-none';
+    return !node.classList.contains(cl);
+};
+
+var setPostContentExpanded = function(node, expanded) {
+    var cl = 'col-expand';
+    if (expanded) {
+        node.classList.add(cl);
+    } else {
+        node.classList.remove(cl);
+    }
+};
+
+var setOutlinePanelVisible = function(visible) {
+    var outlinePanel = document.getElementById('outline-panel');
+    var postContent = document.getElementById('post-content');
+
+    setVisible(outlinePanel, visible);
+    setPostContentExpanded(postContent, !visible);
+};
+
+var isOutlinePanelVisible = function() {
+    var outlinePanel = document.getElementById('outline-panel');
+    return isVisible(outlinePanel);
+};
+
+window.addEventListener('load', function() {
+    var outlinePanel = document.getElementById('outline-panel');
+    outlinePanel.style.display = 'initial';
+
+    var floatingContainer = document.getElementById('container-floating');
+    floatingContainer.style.display = 'initial';
+
+    var outlineContent = document.getElementById('outline-content');
+    var postContent = document.getElementById('post-content');
+
+    // Escape @text to Html.
+    var escapeHtml = function(text) {
+        var map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        };
+
+        return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+    }
+
+    // Fetch the outline.
+    var headers = postContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
+    vxOutlineToc = [];
+    for (var i = 0; i < headers.length; ++i) {
+        var header = headers[i];
+
+        vxOutlineToc.push({
+            level: parseInt(header.tagName.substr(1)),
+            anchor: header.id,
+            title: escapeHtml(header.textContent)
+        });
+    }
+
+    if (vxOutlineToc.length == 0) {
+        setOutlinePanelVisible(false);
+        setVisible(floatingContainer, false);
+        return;
+    }
+
+    var baseLevel = baseLevelOfToc(vxOutlineToc);
+    var tocTree = tocToTree(toPerfectToc(vxOutlineToc, baseLevel), baseLevel);
+
+    outlineContent.innerHTML = tocTree;
+    setOutlinePanelVisible(true);
+    setVisible(floatingContainer, true);
+});
+
+// Return the topest level of @vxOutlineToc, starting from 1.
+var baseLevelOfToc = function(p_toc) {
+    var level = -1;
+    for (i in p_toc) {
+        if (level == -1) {
+            level = p_toc[i].level;
+        } else if (level > p_toc[i].level) {
+            level = p_toc[i].level;
+        }
+    }
+
+    if (level == -1) {
+        level = 1;
+    }
+
+    return level;
+};
+
+// Handle wrong title levels, such as '#' followed by '###'
+var toPerfectToc = function(p_toc, p_baseLevel) {
+    var i;
+    var curLevel = p_baseLevel - 1;
+    var perfToc = [];
+    for (i in p_toc) {
+        var item = p_toc[i];
+
+        // Insert empty header.
+        while (item.level > curLevel + 1) {
+            curLevel += 1;
+            var tmp = { level: curLevel,
+                        anchor: '',
+                        title: '[EMPTY]'
+                      };
+            perfToc.push(tmp);
+        }
+
+        perfToc.push(item);
+        curLevel = item.level;
+    }
+
+    return perfToc;
+};
+
+var itemToHtml = function(item) {
+    return '<a href="#' + item.anchor + '" title="' + item.title + '" data="' + item.anchor + '">' + item.title + '</a>';
+};
+
+// Turn a perfect toc to a tree using <ul>
+var tocToTree = function(p_toc, p_baseLevel) {
+    var i;
+    var front = '<li>';
+    var ending = ['</li>'];
+    var curLevel = p_baseLevel;
+    for (i in p_toc) {
+        var item = p_toc[i];
+        if (item.level == curLevel) {
+            front += '</li>';
+            front += '<li>';
+            front += itemToHtml(item);
+        } else if (item.level > curLevel) {
+            // assert(item.level - curLevel == 1)
+            front += '<ul>';
+            ending.push('</ul>');
+            front += '<li>';
+            front += itemToHtml(item);
+            ending.push('</li>');
+            curLevel = item.level;
+        } else {
+            while (item.level < curLevel) {
+                var ele = ending.pop();
+                front += ele;
+                if (ele == '</ul>') {
+                    curLevel--;
+                }
+            }
+            front += '</li>';
+            front += '<li>';
+            front += itemToHtml(item);
+        }
+    }
+    while (ending.length > 0) {
+        front += ending.pop();
+    }
+    front = front.replace("<li></li>", "");
+    front = '<ul>' + front + '</ul>';
+    return front;
+};
+
+var toggleMore = function() {
+    if (vxOutlineToc.length == 0) {
+        return;
+    }
+
+    var p = document.getElementById('floating-more');
+    if (isOutlinePanelVisible()) {
+        p.textContent = '<';
+        setOutlinePanelVisible(false);
+    } else {
+        p.textContent = '>';
+        setOutlinePanelVisible(true);
+    }
+};
+
+window.addEventListener('scroll', function() {
+    if (vxOutlineToc.length == 0 || !isOutlinePanelVisible()) {
+        return;
+    }
+
+    var postContent = document.getElementById('post-content');
+    var scrollTop = document.documentElement.scrollTop
+                    || document.body.scrollTop
+                    || window.pageYOffset;
+    var eles = postContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+    if (eles.length == 0) {
+        return;
+    }
+
+    var idx = -1;
+    var biaScrollTop = scrollTop + 50;
+    for (var i = 0; i < eles.length; ++i) {
+        if (biaScrollTop >= eles[i].offsetTop) {
+            idx = i;
+        } else {
+            break;
+        }
+    }
+
+    var header = '';
+    if (idx != -1) {
+        header = eles[idx].id;
+    }
+
+    highlightItemOnlyInOutline(header);
+});
+
+var highlightItemOnlyInOutline = function(id) {
+    var cl = 'outline-bold';
+    var outlineContent = document.getElementById('outline-content');
+    var eles = outlineContent.querySelectorAll("a");
+    var target = null;
+    for (var i = 0; i < eles.length; ++i) {
+        var ele = eles[i];
+        if (ele.getAttribute('data') == id) {
+            target = ele;
+            ele.classList.add(cl);
+        } else {
+            ele.classList.remove(cl);
+        }
+    }
+
+    // TODO: scroll target into view within the outline panel scroll area.
+};
+
+    </script>
+
+    <!-- VX_SCRIPTS_PLACEHOLDER -->
+
+    <!-- VX_HEAD_PLACEHOLDER -->
+</head>
+<body class="vx-transparent-background">
+    <div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!-- VX_OUTLINE_PANEL_START -->
+        <div id="outline-panel" style="display:none;" class="d-none d-md-block d-xl-block col-md-3 col-xl-2 bd-toc">
+            <div id="outline-content" class="section-nav"></div>
+        </div>
+        <!-- VX_OUTLINE_PANEL_END -->
+
+        <div id="post-content" class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 bd-content">
+        <div id="vx-content" class="vx-constrain-image-width line-numbers"><nav class="vx-table-of-contents"><ol><li><a href="#项目：网路">项目：网路</a><ol><li><a href="#项目1：主机信息查询">项目1：主机信息查询</a><ol><li><a href="#1.1-qhostinfo类和qnetworkinterface类">1.1 QHostInfo类和QNetworkInterface类</a></li><li><a href="#1.2-主机信息查询项目实现">1.2 主机信息查询项目实现</a></li></ol></li><li><a href="#项目2：基于http的网络应用程序">项目2：基于HTTP的网络应用程序</a><ol><li><a href="#2.1-项目中用到的函数详解">2.1 项目中用到的函数详解</a></li><li><a href="#2.2-主要源码">2.2 主要源码</a></li></ol></li></ol></li></ol></nav><h1 id="项目：网路" class="source-line" data-source-line="2">项目：网路<a class="vx-header-anchor" href="#项目：网路" vx-data-anchor-icon="¶"></a></h1>
+<hr>
+<h2 id="项目1：主机信息查询" class="source-line" data-source-line="4">项目1：主机信息查询<a class="vx-header-anchor" href="#项目1：主机信息查询" vx-data-anchor-icon="¶"></a></h2>
+<p class="source-line" data-source-line="6"><img src='data:image/png;base64,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CFgAAFIRsAAApCJgAQBIRcACAJCKgAUAIBUBCwBAKgIWAIBUBCwAAKkIWAAAUhGwAACkImABAEhFwAIAkIqABQAgFQELAEAqAhYAgFQELAAAqQhYAABSEbAAAKQiYAEASEXAAgCQioAFACAVAQsAQCoCFgCAVAQsAACpCFgAAFIRsAAApCJgAQBIRcACAJCKgAUAIBUBCwBAKgIWAIBUBCwAAKkIWAAAUhGwAACkImABAEhFwAIAkIqABQAgFQELAEAqAhYAgFQELAAAqQhYAABSEbAAAKQiYAEASEXAAgCQioAFACAVAQsAQCoCFgCAVAQsAACpCFgAAFIRsAAApCJgAQBIRcACAJCKgAUAIBUBCwBAKgIWAIBUBCwAAKkIWAAAUhGwAACkImABAEhFwAIAkIqABQAgFQELAEAqAhYAgFQELAAAqQhYAABSEbAAAKQiYAEASEXAAgCQioAFACAVAQsAQCoCFgCAVAQsAACpCFgAAFIRsAAApCJgAQBIRcACAJCKgAUAIBUBCwBAKgIWAIBUBCwAAKkIWAAAUhGwAACkImABAEhFwAIAkIqABQAgFQELAEAqAhYAgFQELAAAqQhYAABSEbAAAKQiYAEASEXAAgCQioAFACAVAQsAQCoCFgCAVAQsAACpCFgAAFIRsAAApCJgAQBIRcACAJCKgAUAIBUBCwBAKgIWAIBUBCwAAKkIWAAAUhGwAACkImABAEhFwAIAkIqABQAgFQELAEAqAhYAgFQELAAAqQhYAABSEbAAAKQiYAEASEXAAgCQioAFACAVAQsAQCoCFgCAVAQsAACpCFgAAFIRsAAApCJgAQBIRcACAJCKgAUAIBUBCwBAKgIWAIBUBCwAAKkIWAAAUhGwAACkImABAEhFwAIAkIqABQAgFQELAEAqAhYAgFQELAAAqQhYAABSEbAAAKQiYAEASEXAAgCQioAFACAVAQsAQCoCFgCAVAQsAACpCFgAAFIRsAAApCJgAQBIRcACAJCKgAUAIBUBCwBAKgIWAIBUBCwAAKkIWAAAUhGwAACkImABAEhFwAIAkIqABQAgFQELAEAqAhYAgFQELAAAqQhYAABSEbAAAKQiYAEASEXAAgCQioAFACAVAQsAQCoCFgCAVAQsAACpCFgAAFIRsAAApCJgAQBIRcACAJCKgAUAIBUBCwBAKgIWAIBUBCwAAKkIWAAAUhGwAACkImABAEhFwAIAkIqABQAglT1lN7722mubfRwAANBKb3V1tb/VBwEAAG289NJLlhAAAJCLgAUAIBUBCwBAKgIWAIBUes8///zQSVzPxt7D+6P3yUfx9Wffjke+/3Tc/eRq3P7jFxHxRPS+EdH/8xf3N//2j+Kxv3ksbl+5GvH9A9Fb37YfEb3vvhCP/tXjcfeTj+Lr335R3O/Inv3Lx2L/3tvx0W9uxxfDtz1xJ5b//Vb8obD9E08/Gn/3VC8++/TL+NXno+2r/WN3x49+sDee+vp2/PbW7ng6bsfV391ZO75H98QLf70nHv/6wWNesyv+6/ceie8+0o/PPr0Vv/r87tp+v7k3DvzF7nj8i1vxy9/dKexr/TFxOz76NOLAX+yOL1dvxW8+v7s+9q544tG78cVXk+xn/fP54lYsx574buvPZ9Sv25pRv6f3d/TteOHQ0/H4+l8/+/er8atrzfsDALaH/w9JJmqR5xL/xQAAAABJRU5ErkJggg==' alt="" class="vx-image-view-image"><br>
+<strong>使用QHostInfo类和QNetworkInterface类可以获取主机的一些网络信息，如IP地址<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>和MAC地址<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。</strong></p>
+<p class="source-line" data-source-line="9"><mark>在Qt项目里使用Qt Network模块，需要在项目配置文件(.pro 文件)中增加一条配置语句：<br>
+QT += network</mark></p>
+<hr>
+<h3 id="1.1-qhostinfo类和qnetworkinterface类" class="source-line" data-source-line="17">1.1 QHostInfo类和QNetworkInterface类<a class="vx-header-anchor" href="#1.1-qhostinfo类和qnetworkinterface类" vx-data-anchor-icon="¶"></a></h3>
+<p class="source-line" data-source-line="20"><mark><em>QHostInfo类常用函数</em></mark></p>
+<p class="source-line" data-source-line="22">QHostInfo类可以根据主机名获取主机的IP地址，或者通过IP地址获取主机名。</p>
+<ul>
+<li class="source-line" data-source-line="24">[static] QString QHostInfo::<strong>localHostName()</strong>：返回本机主机名；</li>
+<li class="source-line" data-source-line="25">[static] QString QHostInfo::<strong>localDomainName()</strong>：返回本机域名系统(domain name system，DNS)域名；</li>
+<li class="source-line" data-source-line="26">[static] QHostInfo QHostInfo::<strong>fromName(const QString &amp;name)</strong>：返回指定主机名的IP地址；</li>
+<li class="source-line" data-source-line="27">[static] int QHostInfo::<strong>lookupHost(const QString &amp;name, QObject *receiver, const char *member)</strong>：以异步的方式根据主机名查找主机的IP地址，并返回一个表示本次查找的ID，可用作abortHostLookup()函数的参数；</li>
+<li class="source-line" data-source-line="28">[static] void QHostInfo::<strong>abortHostLookup(int id)</strong>：使用 lookupHost() 返回的 ID 终止主机查找。</li>
+<li class="source-line" data-source-line="29">QList&lt;QHostAddress&gt; QHostInfo::<strong>addresses() const</strong>：返回与hostName()对应主机关联的IP地址列表；</li>
+<li class="source-line" data-source-line="30">QString QHostInfo::<strong>hostName() const</strong>：返回通过IP地址查找到的主机名；</li>
+<li class="source-line" data-source-line="31"></li>
+</ul>
+<p class="source-line" data-source-line="34"><mark><em>QNetworkInterface类常用的函数</em></mark></p>
+<p class="source-line" data-source-line="36">QNetworkInterface类可以获得运行程序的主机名的所用IP地址和网络接口列表。</p>
+<ul>
+<li class="source-line" data-source-line="38">[static] QList<qhostaddress> QNetworkInterface::<strong>allAddresses()</strong>：返回主机上所有IP地址的列表(如果不需要知道子网掩码和广播地址)；</qhostaddress></li>
+<li class="source-line" data-source-line="39">[static] QList<qnetworkinterface> QNetworkInterface::<strong>allInterfaces()</strong>：返回主机上所有网络接口列表(一个网络接口可能包含多个IP地址，每个IP地址与掩码或广播地址关联)；</qnetworkinterface></li>
+<li class="source-line" data-source-line="40">QList<qnetworkaddressentry> QNetworkInterface::<strong>addressEntries() const</strong>：返回网络接口的IP地址列表，包括子网掩码和广播地址；</qnetworkaddressentry></li>
+<li class="source-line" data-source-line="41">QString QNetworkInterface::<strong>hardwareAddress() const</strong>：返回接口的低级硬件地址，以太网里就是MAC地址；</li>
+<li class="source-line" data-source-line="42">bool QNetworkInterface::<strong>isValid() const</strong>：如果接口信息有效就返回true；</li>
+<li class="source-line" data-source-line="43">QNetworkInterface::<strong>InterfaceType QNetworkInterface::type() const</strong>：返回网络接口的类型；</li>
+</ul>
+<hr>
+<h3 id="1.2-主机信息查询项目实现" class="source-line" data-source-line="47">1.2 主机信息查询项目实现<a class="vx-header-anchor" href="#1.2-主机信息查询项目实现" vx-data-anchor-icon="¶"></a></h3>
+<ol>
+<li class="source-line" data-source-line="49">显示本机地址信息</li>
+</ol>
+<div class="code-toolbar"><pre class="language-c line-numbers"><code class="source-line ++ language-c" data-source-line="50"><span class="token comment">//获取本机主机名和IP地址按钮</span>
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">on_btnGetHostInfo_clicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    QString hostName <span class="token operator">=</span> QHostInfo<span class="token operator">::</span><span class="token function">localHostName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//本机主机名</span>
+    <span class="token function">qDebug</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>hostName<span class="token punctuation">;</span>
+    ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"HostName:"</span><span class="token operator">+</span>hostName<span class="token operator">+</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QHostInfo hostInfo <span class="token operator">=</span> QHostInfo<span class="token operator">::</span><span class="token function">fromName</span><span class="token punctuation">(</span>hostName<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//本机IP地址</span>
+    QList<span class="token operator">&lt;</span>QHostAddress<span class="token operator">&gt;</span> addrList <span class="token operator">=</span> hostInfo<span class="token punctuation">.</span><span class="token function">addresses</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//IP地址列表</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>addrList<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token function">foreach</span><span class="token punctuation">(</span>QHostAddress host<span class="token punctuation">,</span> addrList<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        bool show <span class="token operator">=</span> ui<span class="token operator">-&gt;</span>checkBox_OnlyIPV4<span class="token operator">-&gt;</span><span class="token function">isChecked</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//只显示ipv4</span>
+        <span class="token comment">//Returns the network layer protocol of the host address.</span>
+        show <span class="token operator">=</span> show <span class="token operator">?</span> <span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">protocol</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> QAbstractSocket<span class="token operator">::</span>IPv4Protocol<span class="token punctuation">)</span><span class="token operator">:</span>true<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>show<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"protool:"</span><span class="token operator">+</span><span class="token function">protocolName</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">protocol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//协议</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"HostIPAdddress:"</span><span class="token operator">+</span>host<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token function">QString</span><span class="token punctuation">(</span><span class="token string">"isGolbal() = %1\n"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">arg</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">isGlobal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p class="source-line" data-source-line="74">protocol()函数：<strong>返回主机地址的网络层协议</strong>。</p>
+<div class="code-toolbar"><pre class="language-txt line-numbers"><code class="source-line language-txt" data-source-line="75">QAbstractSocket::NetworkLayerProtocol QHostAddress::protocol() const
+Returns the network layer protocol of the host address.
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+<p class="source-line" data-source-line="79">isGlobal()函数：<strong>如果地址是 IPv4 或 IPv6 全局地址，则返回 true，否则返回 false。全局地址是不为特殊目的（如环回或多播）或未来目的保留的地址。</strong></p>
+<div class="code-toolbar"><pre class="language-txt line-numbers"><code class="source-line language-txt" data-source-line="80">bool QHostAddress::isGlobal() const
+Returns true if the address is an IPv4 or IPv6 global address, false otherwise. A global address is an address that is not reserved for special purposes (like loopback or multicast) or future purposes.
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div>
+<p class="source-line" data-source-line="85">自定义函数protocolName()，通过协议类型返回协议名称字符串。</p>
+<div class="code-toolbar"><pre class="language-c line-numbers"><code class="source-line ++ language-c" data-source-line="86"><span class="token comment">//通过协议类型返回协议名称字符串</span>
+QString Widget<span class="token operator">::</span><span class="token function">protocolName</span><span class="token punctuation">(</span>QAbstractSocket<span class="token operator">::</span>NetworkLayerProtocol protocol<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>protocol<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> QAbstractSocket<span class="token operator">::</span>IPv4Protocol<span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"IPV4"</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> QAbstractSocket<span class="token operator">::</span>IPv6Protocol<span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"IPV6"</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> QAbstractSocket<span class="token operator">::</span>AnyIPProtocol<span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"Any Internet Protocol"</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"Unknown NetWork Layer Protocol"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<ol start="2">
+<li class="source-line" data-source-line="103">查找主机地址信息</li>
+</ol>
+<p class="source-line" data-source-line="105">[static] int QHostInfo::<strong>lookupHost(const QString &amp;name, QObject *receiver, const char *member)</strong>: name表示主机名的字符串，可以是主机名、域名或IP地址；receive和member指定接收者和槽函数名称。</p>
+<div class="code-toolbar"><pre class="language-c line-numbers"><code class="source-line ++ language-c" data-source-line="107"><span class="token comment">//查找域名的IP地址</span>
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">on_btnLookkup_clicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    QString hostName <span class="token operator">=</span> ui<span class="token operator">-&gt;</span>comboBox<span class="token operator">-&gt;</span><span class="token function">currentText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//读取主机名</span>
+    ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"Searching for host information:"</span><span class="token operator">+</span>hostName<span class="token operator">+</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    QHostInfo<span class="token operator">::</span><span class="token function">lookupHost</span><span class="token punctuation">(</span>hostName<span class="token punctuation">,</span> this<span class="token punctuation">,</span><span class="token function">SLOT</span><span class="token punctuation">(</span><span class="token function">do_lookedUpHostInfo</span><span class="token punctuation">(</span>QHostInfo<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//查找主机信息的槽函数</span>
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">do_lookedUpHostInfo</span><span class="token punctuation">(</span><span class="token keyword">const</span> QHostInfo <span class="token operator">&amp;</span>host<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QList<span class="token operator">&lt;</span>QHostAddress<span class="token operator">&gt;</span> addrList <span class="token operator">=</span> host<span class="token punctuation">.</span><span class="token function">addresses</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//获取主机地址列表</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>addrList<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token function">foreach</span><span class="token punctuation">(</span>QHostAddress host<span class="token punctuation">,</span> addrList<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        bool show <span class="token operator">=</span> ui<span class="token operator">-&gt;</span>checkBox_OnlyIPV4<span class="token operator">-&gt;</span><span class="token function">isChecked</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//只显示ipv4</span>
+        <span class="token comment">//Returns the network layer protocol of the host address.</span>
+        show <span class="token operator">=</span> show <span class="token operator">?</span> <span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">protocol</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> QAbstractSocket<span class="token operator">::</span>IPv4Protocol<span class="token punctuation">)</span><span class="token operator">:</span>true<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>show<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"protool:"</span><span class="token operator">+</span><span class="token function">protocolName</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">protocol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//协议</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token function">QString</span><span class="token punctuation">(</span><span class="token string">"isGolbal() = %1\n"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">arg</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">isGlobal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<ol start="3">
+<li class="source-line" data-source-line="135">QNetworkInterface类的使用</li>
+</ol>
+<div class="code-toolbar"><pre class="language-c line-numbers"><code class="source-line ++ language-c" data-source-line="137">
+<span class="token comment">//根据枚举值返回字符串</span>
+QString Widget<span class="token operator">::</span><span class="token function">interfaceType</span><span class="token punctuation">(</span>QNetworkInterface<span class="token operator">::</span>InterfaceType type<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">case</span> QNetworkInterface<span class="token operator">::</span>Unknown<span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"Unkown"</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> QNetworkInterface<span class="token operator">::</span>Loopback<span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"Loopback"</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> QNetworkInterface<span class="token operator">::</span>Ethernet<span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"Etherent"</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> QNetworkInterface<span class="token operator">::</span>Wifi<span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"Wifi"</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+        <span class="token keyword">return</span> <span class="token string">"Other type"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//allInterfaces()</span>
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">on_btnAllInterface_2_clicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    QList<span class="token operator">&lt;</span>QNetworkInterface<span class="token operator">&gt;</span> list <span class="token operator">=</span> QNetworkInterface<span class="token operator">::</span><span class="token function">allInterfaces</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//网络接口列表</span>
+    <span class="token function">foreach</span><span class="token punctuation">(</span>QNetworkInterface interface<span class="token punctuation">,</span>list<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>interface<span class="token punctuation">.</span><span class="token function">isValid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+<span class="token comment">//        The name of the device</span>
+<span class="token comment">//        Hardware devices</span>
+<span class="token comment">//        Interface type</span>
+<span class="token comment">//        Subnet mask</span>
+<span class="token comment">//        broadcast address</span>
+        ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"The name of the device:"</span><span class="token operator">+</span>interface<span class="token punctuation">.</span><span class="token function">humanReadableName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"Hardware devices:"</span><span class="token operator">+</span>interface<span class="token punctuation">.</span><span class="token function">hardwareAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"Interface type:"</span><span class="token operator">+</span><span class="token function">interfaceType</span><span class="token punctuation">(</span>interface<span class="token punctuation">.</span><span class="token function">type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        QList<span class="token operator">&lt;</span>QNetworkAddressEntry<span class="token operator">&gt;</span> entryList <span class="token operator">=</span> interface<span class="token punctuation">.</span><span class="token function">addressEntries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//地址列表</span>
+        <span class="token function">foreach</span><span class="token punctuation">(</span>QNetworkAddressEntry entry<span class="token punctuation">,</span> entryList<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"    IP Address:"</span><span class="token operator">+</span>entry<span class="token punctuation">.</span><span class="token function">ip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"    Subnet mask:"</span><span class="token operator">+</span>entry<span class="token punctuation">.</span><span class="token function">netmask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"    broadcast address:"</span><span class="token operator">+</span>entry<span class="token punctuation">.</span><span class="token function">broadcast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//alladdress</span>
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">on_btnAllAddress_clicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    QList<span class="token operator">&lt;</span>QHostAddress<span class="token operator">&gt;</span> addrelist <span class="token operator">=</span> QNetworkInterface<span class="token operator">::</span><span class="token function">allAddresses</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//IP地址列表</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>addrelist<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token function">foreach</span><span class="token punctuation">(</span>QHostAddress host<span class="token punctuation">,</span> addrelist<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        bool show <span class="token operator">=</span> ui<span class="token operator">-&gt;</span>checkBox_OnlyIPV4<span class="token operator">-&gt;</span><span class="token function">isChecked</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        show <span class="token operator">=</span> show <span class="token operator">?</span> <span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">protocol</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> QAbstractSocket<span class="token operator">::</span>IPv4Protocol<span class="token punctuation">)</span><span class="token operator">:</span>true<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>show<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"protocol:"</span><span class="token operator">+</span><span class="token function">protocolName</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">protocol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token string">"IP Address:"</span><span class="token operator">+</span>host<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ui<span class="token operator">-&gt;</span>plainTextEdit<span class="token operator">-&gt;</span><span class="token function">appendPlainText</span><span class="token punctuation">(</span><span class="token function">QString</span><span class="token punctuation">(</span><span class="token string">"isGrobal() = %1\n"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">arg</span><span class="token punctuation">(</span>host<span class="token punctuation">.</span><span class="token function">isGlobal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<div class="code-toolbar"><pre class="language-txt line-numbers"><code class="source-line language-txt" data-source-line="199">Loopback:
+回送地址（Loopback Address）是本机回送地址（127.X.X.X），即主机IP堆栈内部的IP地址，主要用于网络软件测试以及本地机进程间通信。因此，无论什么程序，一旦使用回送地址发送数据，协议软件会立即将其返回，不进行任何网络传输。
+
+127.0.0.1是回送地址，又指本地机，一般用来测试使用。
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<h2 id="项目2：基于http的网络应用程序" class="source-line" data-source-line="206">项目2：基于HTTP的网络应用程序<a class="vx-header-anchor" href="#项目2：基于http的网络应用程序" vx-data-anchor-icon="¶"></a></h2>
+<p class="source-line" data-source-line="208">QNetworkRequest 类通过 URL 发起网络协议请求，其也保存网络请求的信息，目前支持 HTTP、<br>
+FTP 和本地文件 URL 的下载或上传。<br>
+QNetworkAccessManager 类用于协调网络操作，在 QNetworkRequest 发起网络请求后，<br>
+QNetworkAccessManager 负责发送网络请求，以及创建网络响应。<br>
+QNetworkReply 类表示网络请求的响应，由 QNetworkAccessManager 在发送网络请求后创建网<br>
+络响应。QNetworkReply 提供的信号 finished()、readyRead()、downloadProgress()可用于监测网络响<br>
+应的执行情况，从而进行相应的操作。</p>
+<div class="vx-mermaid-graph source-line" data-source-line="216"><svg aria-roledescription="flowchart-v2" role="graphics-document document" viewBox="-8 -8 625 55" style="max-width: 625px;" xmlns="http://www.w3.org/2000/svg" width="100%" id="vx-mermaid-graph-0" class="vx-image-view-image"><style>#vx-mermaid-graph-0{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#vx-mermaid-graph-0 .error-icon{fill:#552222;}#vx-mermaid-graph-0 .error-text{fill:#552222;stroke:#552222;}#vx-mermaid-graph-0 .edge-thickness-normal{stroke-width:2px;}#vx-mermaid-graph-0 .edge-thickness-thick{stroke-width:3.5px;}#vx-mermaid-graph-0 .edge-pattern-solid{stroke-dasharray:0;}#vx-mermaid-graph-0 .edge-pattern-dashed{stroke-dasharray:3;}#vx-mermaid-graph-0 .edge-pattern-dotted{stroke-dasharray:2;}#vx-mermaid-graph-0 .marker{fill:#333333;stroke:#333333;}#vx-mermaid-graph-0 .marker.cross{stroke:#333333;}#vx-mermaid-graph-0 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#vx-mermaid-graph-0 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#vx-mermaid-graph-0 .cluster-label text{fill:#333;}#vx-mermaid-graph-0 .cluster-label span{color:#333;}#vx-mermaid-graph-0 .label text,#vx-mermaid-graph-0 span{fill:#333;color:#333;}#vx-mermaid-graph-0 .node rect,#vx-mermaid-graph-0 .node circle,#vx-mermaid-graph-0 .node ellipse,#vx-mermaid-graph-0 .node polygon,#vx-mermaid-graph-0 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#vx-mermaid-graph-0 .node .label{text-align:center;}#vx-mermaid-graph-0 .node.clickable{cursor:pointer;}#vx-mermaid-graph-0 .arrowheadPath{fill:#333333;}#vx-mermaid-graph-0 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#vx-mermaid-graph-0 .flowchart-link{stroke:#333333;fill:none;}#vx-mermaid-graph-0 .edgeLabel{background-color:#e8e8e8;text-align:center;}#vx-mermaid-graph-0 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#vx-mermaid-graph-0 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#vx-mermaid-graph-0 .cluster text{fill:#333;}#vx-mermaid-graph-0 .cluster span{color:#333;}#vx-mermaid-graph-0 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#vx-mermaid-graph-0 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#vx-mermaid-graph-0 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse" refY="5" refX="10" viewBox="0 0 12 20" class="marker flowchart" id="flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse" refY="5" refX="0" viewBox="0 0 10 10" class="marker flowchart" id="flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="11" viewBox="0 0 10 10" class="marker flowchart" id="flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="-1" viewBox="0 0 10 10" class="marker flowchart" id="flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="12" viewBox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="-1" viewBox="0 0 11 11" class="marker cross flowchart" id="flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-req LE-am" id="L-req-am-0" d="M143,19.5L147.16666666666666,19.5C151.33333333333334,19.5,159.66666666666666,19.5,168,19.5C176.33333333333334,19.5,184.66666666666666,19.5,188.83333333333334,19.5L193,19.5"></path><path marker-end="url(#flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-am LE-reply" id="L-am-reply-0" d="M448,19.5L452.1666666666667,19.5C456.3333333333333,19.5,464.6666666666667,19.5,473,19.5C481.3333333333333,19.5,489.6666666666667,19.5,493.8333333333333,19.5L498,19.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g transform="translate(71.5, 19.5)" id="flowchart-req-12" class="node default default"><rect height="39" width="143" y="-19.5" x="-71.5" ry="0" rx="0" style="" class="basic label-container"></rect><g transform="translate(-64, -12)" style="" class="label"><foreignObject height="24" width="128"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">发起网络协议请求</span></div></foreignObject></g></g><g transform="translate(320.5, 19.5)" id="flowchart-am-13" class="node default default"><rect height="39" width="255" y="-19.5" x="-127.5" ry="0" rx="0" style="" class="basic label-container"></rect><g transform="translate(-120, -12)" style="" class="label"><foreignObject height="24" width="240"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">发送网络请求，以及创建网络响应</span></div></foreignObject></g></g><g transform="translate(553.5, 19.5)" id="flowchart-reply-14" class="node default default"><rect height="39" width="111" y="-19.5" x="-55.5" ry="0" rx="0" style="" class="basic label-container"></rect><g transform="translate(-48, -12)" style="" class="label"><foreignObject height="24" width="96"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">监测网络响应</span></div></foreignObject></g></g></g></g></g></svg></div>
+<figure><img src='data:image/png;base64,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' alt="" class="vx-image-view-image"></figure>
+<h3 id="2.1-项目中用到的函数详解" class="source-line" data-source-line="226">2.1 项目中用到的函数详解<a class="vx-header-anchor" href="#2.1-项目中用到的函数详解" vx-data-anchor-icon="¶"></a></h3>
+<ol>
+<li class="source-line" data-source-line="228">
+<p class="source-line" data-source-line="228"><mark>clearButtonEnabled : bool</mark><br>
+此属性用于保存行编辑在不为空时是否显示清除按钮。<br>
+如果启用，行编辑在包含一些文本时会显示一个尾随清除按钮，否则，行编辑不会显示清除按钮（默认值）。</p>
+</li>
+<li class="source-line" data-source-line="232">
+<p class="source-line" data-source-line="232"><strong>默认路径按钮功能：</strong></p>
+</li>
+</ol>
+<ul>
+<li class="source-line" data-source-line="233"><mark>[static] QString QDir::currentPath()</mark><br>
+返回应用进程当前目录的绝对路径。当前目录是使用 QDir：：setCurrent（） 设置的最后一个目录，或者，如果从未调用过，则为父进程启动此应用进程的目录。</li>
+<li class="source-line" data-source-line="235"><mark>bool QDir::mkdir(const QString &amp;dirName) const</mark><br>
+创建一个名为 dirName 的子目录。</li>
+</ul>
+<ol start="3">
+<li class="source-line" data-source-line="237"><strong>下载按钮功能：</strong></li>
+</ol>
+<ul>
+<li class="source-line" data-source-line="238"><mark>QString QString::trimmed() const</mark><br>
+返回一个字符串，该字符串删除了开头和结尾的空格。</li>
+<li class="source-line" data-source-line="240"><mark>[static] QUrl QUrl::fromUserInput(const QString &amp;userInput)</mark><br>
+从用户提供的 userInput 字符串返回有效的 URL（如果可以扣除）。如果不可能，则返回无效的 QUrl（）。</li>
+<li class="source-line" data-source-line="242"><mark>QString QUrl::errorString() const</mark><br>
+如果修改此 QUrl 对象的最后一个操作遇到解析错误，则返回错误消息。如果未检测到错误，则此函数返回一个空字符串，isValid（） 返回 true。</li>
+<li class="source-line" data-source-line="244"><mark>QString QUrl::fileName(QUrl::ComponentFormattingOptions options = FullyDecoded) const</mark><br>
+返回文档名,不包括目录路径。</li>
+<li class="source-line" data-source-line="246"><mark>bool QFile::remove()</mark><br>
+删除 fileName（） 指定的文档。如果成功，则返回 true;否则返回 false。文档在删除之前已关闭。</li>
+<li class="source-line" data-source-line="248"><mark>QNetworkReply *QNetworkAccessManager::get(const QNetworkRequest &amp;request)</mark><br>
+发布一个请求以获取目标请求的内容，并返回一个新的 QNetworkReply 对象，该对象打开以供读取，每当新数据到达时，该对象都会发出 readyRead（） 信号。将下载内容以及相关的标题。</li>
+<li class="source-line" data-source-line="250"><mark>[signal] void QIODevice::readyRead()</mark><br>
+每当有新数据可用时，此信号就会发出一次从设备的当前读取信道读取。只有当有新数据可用时，它才会再次发出，例如，当新的网络数据有效负载到达您的网络套接字时，或者当新的数据块附加到您的设备时。</li>
+<li class="source-line" data-source-line="252"><mark>[signal] void QNetworkReply::downloadProgress(qint64 bytesReceived, qint64 bytesTotal)</mark><br>
+发出此信号以指示此网络请求的下载部分的进度（如果有）。如果没有与此请求关联的下载，则此信号将发出一次，其中 0 作为 bytesReceived 和 bytesTotal 的值。</li>
+<li class="source-line" data-source-line="254"><mark>[signal] void QNetworkReply::finished()</mark><br>
+当回复完成处理时，将发出此信号。发出此信号后，回复的数据或元数据将不再更新。</li>
+</ul>
+<ol start="4">
+<li class="source-line" data-source-line="257">读取下载数据</li>
+</ol>
+<ul>
+<li class="source-line" data-source-line="258">
+<p class="source-line" data-source-line="258"><mark>qint64 QIODevice::write(const char *data, qint64 maxSize)</mark><br>
+将数据中最多 maxSize 字节的数据写入设备。返回实际写入的字节数，如果发生错误，则返回 -1。</p>
+</li>
+<li class="source-line" data-source-line="261">
+<p class="source-line" data-source-line="261"><mark>QByteArray QIODevice::readAll() </mark><br>
+从设备读取所有剩余数据，并将其作为字节数组返回。</p>
+</li>
+</ul>
+<h3 id="2.2-主要源码" class="source-line" data-source-line="264">2.2 主要源码<a class="vx-header-anchor" href="#2.2-主要源码" vx-data-anchor-icon="¶"></a></h3>
+<p class="source-line" data-source-line="265">头文件</p>
+<div class="code-toolbar"><pre class="language-c line-numbers"><code class="source-line ++ language-c" data-source-line="266"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">WIDGET_H</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">WIDGET_H</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QWidget&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QNetworkAccessManager&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QFile&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QMessageBox&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QIODevice&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QNetworkReply&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QDesktopServices&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QFileInfo&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QUrl&gt;</span></span>
+
+namespace Ui <span class="token punctuation">{</span>
+class Widget<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+class Widget <span class="token operator">:</span> public QWidget
+<span class="token punctuation">{</span>
+    Q_OBJECT
+private<span class="token operator">:</span>
+    QNetworkAccessManager networkManager<span class="token punctuation">;</span>   <span class="token comment">//网络管理</span>
+    QNetworkReply <span class="token operator">*</span>reply<span class="token punctuation">;</span>                   <span class="token comment">//网络响应</span>
+    QFile <span class="token operator">*</span>downloadedFile<span class="token punctuation">;</span>                  <span class="token comment">//下载保存的临时文件</span>
+public<span class="token operator">:</span>
+    explicit <span class="token function">Widget</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent <span class="token operator">=</span> nullptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">~</span><span class="token function">Widget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+private slots<span class="token operator">:</span>
+    <span class="token keyword">void</span> <span class="token function">do_finished</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">do_readyRead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">do_downloadProgress</span><span class="token punctuation">(</span>qint64 bytesRead<span class="token punctuation">,</span> qint64 totalBytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">on_btnDownload_clicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">void</span> <span class="token function">on_btnDefaultPath_clicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">void</span> <span class="token function">on_editURL_textChanged</span><span class="token punctuation">(</span><span class="token keyword">const</span> QString <span class="token operator">&amp;</span>arg1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+private<span class="token operator">:</span>
+    Ui<span class="token operator">::</span>Widget <span class="token operator">*</span>ui<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> <span class="token comment">// WIDGET_H</span></span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<p class="source-line" data-source-line="312">源文件</p>
+<div class="code-toolbar"><pre class="language-c line-numbers"><code class="source-line ++ language-c" data-source-line="313"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"widget.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"ui_widget.h"</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QDir&gt;</span></span>
+
+Widget<span class="token operator">::</span><span class="token function">Widget</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent<span class="token punctuation">)</span> <span class="token operator">:</span>
+    <span class="token function">QWidget</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">ui</span><span class="token punctuation">(</span>new Ui<span class="token operator">::</span>Widget<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span><span class="token function">setupUi</span><span class="token punctuation">(</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//clearButtonEnabled : bool</span>
+<span class="token comment">//This property holds whether the line edit displays a clear button when it is not empty.</span>
+<span class="token comment">//If enabled, the line edit displays a trailing clear button when it contains some text,</span>
+<span class="token comment">//            otherwise the line edit does not show a clear button (the default).</span>
+    ui<span class="token operator">-&gt;</span>editURL<span class="token operator">-&gt;</span><span class="token function">setClearButtonEnabled</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    this<span class="token operator">-&gt;</span><span class="token function">setLayout</span><span class="token punctuation">(</span>ui<span class="token operator">-&gt;</span>verticalLayout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+Widget<span class="token operator">::</span><span class="token operator">~</span><span class="token function">Widget</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    delete ui<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">do_finished</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span class="token comment">//网络响应结束</span>
+    QFileInfo <span class="token function">fileInfo</span><span class="token punctuation">(</span>downloadedFile<span class="token operator">-&gt;</span><span class="token function">fileName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取下载文件的文件名</span>
+    downloadedFile<span class="token operator">-&gt;</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    delete downloadedFile<span class="token punctuation">;</span>  <span class="token comment">//删除临时文件</span>
+    reply<span class="token operator">-&gt;</span><span class="token function">deleteLater</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//由主事件循环删除此文件对象</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>ui<span class="token operator">-&gt;</span>checkBoxOpen<span class="token operator">-&gt;</span><span class="token function">isChecked</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        QDesktopServices<span class="token operator">::</span><span class="token function">openUrl</span><span class="token punctuation">(</span>QUrl<span class="token operator">::</span><span class="token function">fromLocalFile</span><span class="token punctuation">(</span>fileInfo<span class="token punctuation">.</span><span class="token function">absoluteFilePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ui<span class="token operator">-&gt;</span>btnDownload<span class="token operator">-&gt;</span><span class="token function">setEnabled</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">do_readyRead</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//读取下载数据</span>
+    downloadedFile<span class="token operator">-&gt;</span><span class="token function">write</span><span class="token punctuation">(</span>reply<span class="token operator">-&gt;</span><span class="token function">readAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//    qint64 QIODevice::write(const char *data, qint64 maxSize)</span>
+<span class="token comment">//    Writes at most maxSize bytes of data from data to the device.</span>
+<span class="token comment">//            Returns the number of bytes that were actually written,</span>
+<span class="token comment">//            or -1 if an error occurred.</span>
+<span class="token comment">//    QByteArray QIODevice::readAll()</span>
+<span class="token comment">//    Reads all remaining data from the device, and returns it as a byte array.</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">do_downloadProgress</span><span class="token punctuation">(</span>qint64 bytesRead<span class="token punctuation">,</span> qint64 totalBytes<span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span class="token comment">//下载进度</span>
+    ui<span class="token operator">-&gt;</span>progressBar<span class="token operator">-&gt;</span><span class="token function">setMaximum</span><span class="token punctuation">(</span>totalBytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//Holds the total amount of data to download in bytes.</span>
+    ui<span class="token operator">-&gt;</span>progressBar<span class="token operator">-&gt;</span><span class="token function">setValue</span><span class="token punctuation">(</span>bytesRead<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">//默认了路径 按钮</span>
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">on_btnDefaultPath_clicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+<span class="token comment">//    [static] QString QDir::currentPath()</span>
+<span class="token comment">//    Returns the absolute path of the application's current directory.</span>
+<span class="token comment">//            The current directory is the last directory set with QDir::setCurrent() or,</span>
+<span class="token comment">//            if that was never called,</span>
+<span class="token comment">//            the directory at which this application was started at by the parent process.</span>
+    QString curPath <span class="token operator">=</span> QDir<span class="token operator">::</span><span class="token function">currentPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//返回当前绝对路径给QString变量</span>
+    QDir <span class="token function">dir</span><span class="token punctuation">(</span>curPath<span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">//定义QDir变量</span>
+    QString sub <span class="token operator">=</span> <span class="token string">"temp"</span><span class="token punctuation">;</span>
+<span class="token comment">//    bool QDir::mkdir(const QString &amp;dirName) const</span>
+<span class="token comment">//    Creates a sub-directory called dirName.</span>
+    dir<span class="token punctuation">.</span><span class="token function">mkdir</span><span class="token punctuation">(</span>sub<span class="token punctuation">)</span><span class="token punctuation">;</span>                         <span class="token comment">//当前路径下创立名为sub的文件夹</span>
+    ui<span class="token operator">-&gt;</span>editPath<span class="token operator">-&gt;</span><span class="token function">setText</span><span class="token punctuation">(</span>curPath<span class="token operator">+</span><span class="token string">"/"</span><span class="token operator">+</span>sub<span class="token operator">+</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//设置lineedit的文字</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//下载按钮，开始下载</span>
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">on_btnDownload_clicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+<span class="token comment">//    QString QString::trimmed() const</span>
+<span class="token comment">//    Returns a string that has whitespace removed from the start and the end.</span>
+    QString urlSpec <span class="token operator">=</span> ui<span class="token operator">-&gt;</span>editURL<span class="token operator">-&gt;</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trimmed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//将editURL中的文字给QString变量赋值</span>
+    <span class="token comment">//urlspec判空</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>urlSpec<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        QMessageBox<span class="token operator">::</span><span class="token function">information</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span><span class="token string">"error"</span><span class="token punctuation">,</span><span class="token string">"Please specify the download address"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token comment">//    [static] QUrl QUrl::fromUserInput(const QString &amp;userInput)</span>
+<span class="token comment">//    Returns a valid URL from a user supplied userInput string if one can be deducted.</span>
+<span class="token comment">//    In the case that is not possible, an invalid QUrl() is returned.</span>
+    QUrl newUrl <span class="token operator">=</span> QUrl<span class="token operator">::</span><span class="token function">fromUserInput</span><span class="token punctuation">(</span>urlSpec<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//从urlSpaec里获取url</span>
+    <span class="token comment">//newurl判有效</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>newUrl<span class="token punctuation">.</span><span class="token function">isValid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment">//        QString QUrl::errorString() const</span>
+<span class="token comment">//        Returns an error message if the last operation that modified this QUrl object ran into a parsing error.</span>
+<span class="token comment">//                If no error was detected,</span>
+<span class="token comment">//                this function returns an empty string and isValid() returns true.</span>
+        QString info <span class="token operator">=</span> <span class="token string">"The URL is invalid:"</span><span class="token operator">+</span>urlSpec<span class="token operator">+</span><span class="token string">"\n error:"</span><span class="token operator">+</span>newUrl<span class="token punctuation">.</span><span class="token function">errorString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        QMessageBox<span class="token operator">::</span><span class="token function">information</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span><span class="token string">"error"</span><span class="token punctuation">,</span>info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    QString tempDir <span class="token operator">=</span> ui<span class="token operator">-&gt;</span>editPath<span class="token operator">-&gt;</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trimmed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//临时目录</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>tempDir<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        QMessageBox<span class="token operator">::</span><span class="token function">information</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span><span class="token string">"error"</span><span class="token punctuation">,</span><span class="token string">"Please specify the download address"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    QString fullFileName <span class="token operator">=</span> tempDir <span class="token operator">+</span> newUrl<span class="token punctuation">.</span><span class="token function">fileName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//文件名</span>
+<span class="token comment">//    QString QUrl::fileName(QUrl::ComponentFormattingOptions options = FullyDecoded) const</span>
+<span class="token comment">//    Returns the name of the file, excluding the directory path.</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>QFile<span class="token operator">::</span><span class="token function">exists</span><span class="token punctuation">(</span>fullFileName<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">//如果文件存在</span>
+        QFile<span class="token operator">::</span><span class="token function">remove</span><span class="token punctuation">(</span>fullFileName<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//删除文件</span>
+<span class="token comment">//        bool QFile::remove()</span>
+<span class="token comment">//        Removes the file specified by fileName(). Returns true if successful; otherwise returns false.</span>
+<span class="token comment">//        The file is closed before it is removed.</span>
+    <span class="token punctuation">}</span>
+
+    downloadedFile <span class="token operator">=</span> new <span class="token function">QFile</span><span class="token punctuation">(</span>fullFileName<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//创建临时文件</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>downloadedFile<span class="token operator">-&gt;</span><span class="token function">open</span><span class="token punctuation">(</span>QIODevice<span class="token operator">::</span>WriteOnly<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        QMessageBox<span class="token operator">::</span><span class="token function">information</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span><span class="token string">"error"</span><span class="token punctuation">,</span><span class="token string">"Temporary file open error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ui<span class="token operator">-&gt;</span>btnDownload<span class="token operator">-&gt;</span><span class="token function">setEnabled</span><span class="token punctuation">(</span>false<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//发送网络请求，创建网络相应</span>
+    reply <span class="token operator">=</span> networkManager<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token function">QNetworkRequest</span><span class="token punctuation">(</span>newUrl<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//网络响应从网络管理里面获取网络请求</span>
+<span class="token comment">//    QNetworkReply *QNetworkAccessManager::get(const QNetworkRequest &amp;request)</span>
+<span class="token comment">//            Posts a request to obtain the contents of the target request and</span>
+<span class="token comment">//            returns a new QNetworkReply object opened for reading</span>
+<span class="token comment">//            which emits the readyRead() signal whenever new data arrives.</span>
+<span class="token comment">//            The contents as well as associated headers will be downloaded.</span>
+<span class="token comment">//    QObject *QObject::parent() const</span>
+<span class="token comment">//    Returns a pointer to the parent object.</span>
+
+    <span class="token function">connect</span><span class="token punctuation">(</span>reply<span class="token punctuation">,</span> <span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">readyRead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> this<span class="token punctuation">,</span> <span class="token function">SLOT</span><span class="token punctuation">(</span><span class="token function">do_readyRead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>reply<span class="token punctuation">,</span> <span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">downloadProgress</span><span class="token punctuation">(</span>qint64<span class="token punctuation">,</span>qint64<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            this<span class="token punctuation">,</span> <span class="token function">SLOT</span><span class="token punctuation">(</span><span class="token function">do_downloadProgress</span><span class="token punctuation">(</span>qint64<span class="token punctuation">,</span>qint64<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>reply<span class="token punctuation">,</span> <span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">finished</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> this<span class="token punctuation">,</span> <span class="token function">SLOT</span><span class="token punctuation">(</span><span class="token function">do_finished</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//    [signal] void QIODevice::readyRead()</span>
+<span class="token comment">//    This signal is emitted once every time new data is available for</span>
+<span class="token comment">//    reading from the device's current read channel.</span>
+<span class="token comment">//    It will only be emitted again once new data is available,</span>
+<span class="token comment">//    such as when a new payload of network data has arrived on your network socket,</span>
+<span class="token comment">//    or when a new block of data has been appended to your device.</span>
+<span class="token comment">//    [signal] void QNetworkReply::downloadProgress(qint64 bytesReceived, qint64 bytesTotal)</span>
+<span class="token comment">//    This signal is emitted to indicate the progress of the download part of</span>
+<span class="token comment">//    this network request, if there's any. If there's no download associated with this request,</span>
+<span class="token comment">//    this signal will be emitted once with 0 as the value of both bytesReceived and bytesTotal.</span>
+<span class="token comment">//    [signal] void QNetworkReply::finished()</span>
+<span class="token comment">//    This signal is emitted when the reply has finished processing.</span>
+<span class="token comment">//    After this signal is emitted, there will be no more updates to the reply's data or metadata.</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> Widget<span class="token operator">::</span><span class="token function">on_editURL_textChanged</span><span class="token punctuation">(</span><span class="token keyword">const</span> QString <span class="token operator">&amp;</span>arg1<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">Q_UNUSED</span><span class="token punctuation">(</span>arg1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ui<span class="token operator">-&gt;</span>progressBar<span class="token operator">-&gt;</span><span class="token function">setMaximum</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ui<span class="token operator">-&gt;</span>progressBar<span class="token operator">-&gt;</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p class="source-line" data-source-line="13">IP地址（Internet Protocol Address）是指互联网协议地址，又译为网际协议地址。IP地址是IP协议提供的一种统一的地址格式，它为互联网上的每一个网络和每一台主机分配一个逻辑地址，以此来屏蔽物理地址的差异。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p class="source-line" data-source-line="15">MAC地址（英语：Media Access Control Address），直译为媒体存取控制位址，也称为局域网地址（LAN Address），MAC位址，以太网地址（Ethernet Address）或物理地址（Physical Address），它是一个用来确认网络设备位置的位址。在OSI模型中，第三层网络层负责IP地址，第二层数据链路层则负责MAC位址。MAC地址用于在网络中唯一标示一个网卡，一台设备若有一或多个网卡，则每个网卡都需要并会有一个唯一的MAC地址。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+</div>
+        </div>
+    </div>
+    </div>
+
+    <!-- VX_OUTLINE_BUTTON_START -->
+    <div id="container-floating" style="display:none;" class="d-none d-md-block d-xl-block">
+        <div id="floating-button" onclick="toggleMore()">
+            <p id="floating-more" class="more">&gt;</p>
+        </div>
+    </div>
+    <!-- VX_OUTLINE_BUTTON_END -->
+</body>
+</html>
